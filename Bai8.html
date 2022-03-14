@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="Play()">Play</button>
+<script>
+    function Play() {
+        let a = prompt("Nhap so bat dau: ");
+        let b = prompt("Nhap so ket thuc: ");
+        let result = Math.floor(Math.random() * (+b - +a + 1)) + +a;
+        let count = 0;
+        for (let i= 0 ; i < 3; i++) {
+            let c = prompt("Nhap so muon chon: ");
+            if (c >=a && c <= b) {
+                if (c == result ) {
+                    alert("Chuc mung ban da thang");
+                    break;
+                }
+                else {
+                    alert("Chua chinh xac");
+                    count++;
+                }
+            }
+            else {
+                alert("So chon khong thoa man");
+            }
+        }
+        if (count == 3) {
+            alert("Ban da thua");
+        }
+    }
+</script>
+</body>
+</html>

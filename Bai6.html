@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap so luong" id="sl">
+<button onclick="Tinh()">Tinh</button>
+<h2 id="rs"></h2>
+<script>
+    function Tinh() {
+        let tong = 0;
+        let count = 0;
+        let amount = document.getElementById('sl').value;
+        for (let i = 0; count < +amount ; i++)
+        {
+            if (i%7 == 0) {
+                tong = tong +i;
+                count++;
+            }
+        }
+        document.getElementById('rs').innerHTML = "Tong "+ amount + " so dau tien chia het cho 7 la: " + tong;
+    }
+</script>
+</body>
+</html>

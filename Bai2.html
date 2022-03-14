@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap so lan lap" id="sl">
+<button onclick="Ktra()">Bat dau</button>
+<script>
+    let count = document.getElementById('sl');
+    function Ktra() {
+        let i = 0;
+        while (i < +count.value) {
+            let a = prompt("Nhap nhiet do: ");
+            if (a < 20) {
+                document.write("Ban nen tang nhiet do");
+                document.write('<br>');
+                i++;
+            }
+            if (a > 100) {
+                document.write("Ban nen giam nhiet do");
+                document.write('<br>');
+                i++
+            }
+        }
+    }
+</script>
+</body>
+</html>
